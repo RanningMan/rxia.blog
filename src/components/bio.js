@@ -2,7 +2,7 @@
  * Bio component that queries for data
  * with Gatsby's useStaticQuery component
  *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
 import * as React from "react"
@@ -19,7 +19,7 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            github
           }
         }
       }
@@ -35,8 +35,8 @@ const Bio = () => {
       <StaticImage
         className="bio-avatar"
         layout="fixed"
-        formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
+        formats={["AUTO", "WEBP", "AVIF"]}
+        src="../images/Ran.jpg"
         width={50}
         height={50}
         quality={95}
@@ -46,8 +46,8 @@ const Bio = () => {
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
+          <a href={`${social.github}`}>
+            You should follow him on github
           </a>
         </p>
       )}

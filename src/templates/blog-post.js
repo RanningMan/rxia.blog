@@ -1,18 +1,33 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { Disqus } from "gatsby-plugin-disqus"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-}) => {
-  const siteTitle = site.siteMetadata?.title || `Title`
+const BlogPostTemplate = ({ data, location }) => {
+  const post = data.markdownRemark
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const { previous, next } = data
+
+  const layoutData = {
+    tags: [],
+  }
+
+  const frontmatter = data.markdownRemark.frontmatter
+  frontmatter.tag?.forEach(tag => {
+    if (!layoutData.tags.includes(tag)) {
+      layoutData.tags.push(tag)
+    }
+  })
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Seo
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
       <article
         className="blog-post"
         itemScope
@@ -21,12 +36,28 @@ const BlogPostTemplate = ({
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+          <div className="tag-list">
+            {layoutData.tags.map(tag => (
+              <div className="tag">{tag}</div>
+            ))}
+          </div>
         </header>
         <section
+          className="blog-content"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr />
+        <Disqus
+          config={{
+            /* Replace PAGE_URL with your post's canonical URL variable */
+            url: location.href,
+            /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+            identifier: location.pathname,
+            /* Replace PAGE_TITLE with the title of the page */
+            title: post.frontmatter.title,
+          }}
+        />
         <footer>
           <Bio />
         </footer>
@@ -42,14 +73,14 @@ const BlogPostTemplate = ({
           }}
         >
           <li>
-            {previous && (
+            {previous && !previous.frontmatter.isDraft && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
-            {next && (
+            {next && !next.frontmatter.isDraft && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
@@ -58,15 +89,6 @@ const BlogPostTemplate = ({
         </ul>
       </nav>
     </Layout>
-  )
-}
-
-export const Head = ({ data: { markdownRemark: post } }) => {
-  return (
-    <Seo
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
-    />
   )
 }
 
@@ -91,6 +113,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tag
+        isDraft
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
@@ -99,6 +123,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        isDraft
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -107,6 +132,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        isDraft
       }
     }
   }
