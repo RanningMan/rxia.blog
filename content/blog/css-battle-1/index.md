@@ -1,6 +1,6 @@
 ---
 title: "CSSBattle Solution #1"
-date: "2023-01-08"
+date: "2023-01-07"
 description: "Solution for CSSBattle #1"
 tag: ["CSS", "web development", "CSS Battle Solutions"]
 isDraft: false
