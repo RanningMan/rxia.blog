@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "rxia.blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Ran Xia's blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Ran Xia <xiaranforusa@gmail.com>",
   "dependencies": {
     "@fontsource/merriweather": "^4.5.14",
     "@fontsource/montserrat": "^4.5.13",
