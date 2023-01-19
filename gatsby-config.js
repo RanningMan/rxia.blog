@@ -20,6 +20,9 @@ module.exports = {
       github: `https://github.com/RanningMan`,
     },
   },
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-disqus`,
