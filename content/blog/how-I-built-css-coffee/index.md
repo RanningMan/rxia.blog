@@ -2,13 +2,13 @@
 title: How I Built CSS Coffee
 date: "2023-02-14"
 description: "I recently took up the 12 Startups in 12 Months Challenge. This blog does a reflection on what I did to launch the first project -- csscoffee.dev"
-tag: ["web development", "12 startups in 12 months"]
+tag: ["web development", "12 startups in 12 months", "csscoffee"]
 isDraft: false
 ---
 
 Excited to embark on a bold new endeavor, I recently took up the 12 Startups in 12 Months Challenge, determined to transform myself from a mere feature-coding software engineer to a self-sufficient, product-building entrepreneur. My commitment to myself is to devote equal attention and effort to both product development and marketing activities for each project.
 
-For my inaugural undertaking, I set my sights on creating a blogging platform, “CSS Coffee”. that showcases a daily CSS demo, exploring various CSS concepts. In this blog, I will do a reflection on the process of taking this idea from conception to fruition, as I built the platform and positioned it as a go-to resource for CSS enthusiasts and aspiring developers alike.
+For my inaugural undertaking, I set my sights on creating a blogging platform, [csscoffee.dev](https://csscoffee.dev), that showcases a daily CSS demo to explore various CSS concepts. In this blog, I will do a reflection on the process of taking this idea from conception to fruition, as I built the platform and positioned it as a go-to resource for CSS enthusiasts and aspiring developers alike.
 
 # Ideation
 
