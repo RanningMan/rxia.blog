@@ -2,7 +2,16 @@
 title: "CodePen Weekly Challenge - Feb Week 2"
 date: "2023-02-18"
 description: "My Solution to this week's CodePen challenge"
-tag: ["HTML", "CSS", "web development", "CodePen Challenge"]
+tag:
+  [
+    "HTML",
+    "CSS",
+    "web development",
+    "CodePen Challenge",
+    "WebXR",
+    "AFrame",
+    "Three.js",
+  ]
 isDraft: false
 ---
 
