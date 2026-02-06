@@ -2,7 +2,7 @@
 title: "How I Built and Launched My First App Using Mostly Free AI Tools"
 date: "2024-02-06"
 description: "How I Built and Launched My First App Using Mostly Free AI Tools"
-tag: ["Vibe Coding", "Indie Hacker", "AI", "LLM", "ChatGPT"]
+tag: ["Vibe Coding", "Indie Hacker", "AI", "LLM", "ChatGPT", "12 startups in 12 months"]
 isDraft: false
 ---
 
