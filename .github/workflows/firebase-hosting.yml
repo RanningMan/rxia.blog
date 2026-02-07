@@ -20,6 +20,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Clean build cache
+        run: npm run clean
       - name: Build site
         run: npm run build
       - name: Deploy production
@@ -28,4 +30,3 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: balmy-link-218819
-          channelId: live
