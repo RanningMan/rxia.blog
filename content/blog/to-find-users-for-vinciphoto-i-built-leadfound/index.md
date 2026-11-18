@@ -43,13 +43,13 @@ You tell it what your product is (or just paste your product's URL), and it will
 4. **Write:** you write a reply in your own language, or let the AI draft one (share experience, recommend directly, tell a story, ask a question, or send a direct message), and it translates it back into the post's language. You see the translation first and only use it once you're happy with it.
 5. **Check:** before you post on Reddit, it reads that subreddit's rules and tells you whether your reply is likely to be removed as an ad.
 
-<!-- TODO: add screenshot of the lead list -->
+![LeadFound lead list](./lead-list.png)
 
-_The lead list: English posts translated into Chinese and scored for buying intent. (Sample data.)_
+_The lead list: English posts translated into Korean and scored for buying intent. (Sample data.)_
 
-<!-- TODO: add screenshot of the draft page -->
+![LeadFound draft page](./draft-page.png)
 
-_The draft page: write in Chinese, run a safety check, then translate back into English and copy. (Sample data.)_
+_The draft page: write in Korean, run a safety check, then translate back into English and copy. (Sample data.)_
 
 The last step is yours: click "Copy & Open Thread", paste, and post. LeadFound never posts for you, and it never stores your login for any platform. Your account's reputation is the most valuable thing you have, so whether and how to post should be your call.
 
